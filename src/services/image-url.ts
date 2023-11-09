@@ -1,4 +1,8 @@
+import noImage from '../assets/no-image-placeholder.webp'
+
 const getCroppedImageUrl = (url: string) => {
+    if(!url) return noImage;
+
     const target = "media/";
     // To get the index of last character of media/
     const index = url.indexOf(target) + target.length;
